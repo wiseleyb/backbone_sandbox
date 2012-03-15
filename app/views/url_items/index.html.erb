@@ -1,0 +1,25 @@
+<h1>Listing url_items</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Operation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @url_items.each do |url_item| %>
+  <tr>
+    <td><%= url_item.title %></td>
+    <td><%= url_item.operation_id %></td>
+    <td><%= link_to 'Show', url_item %></td>
+    <td><%= link_to 'Edit', edit_url_item_path(url_item) %></td>
+    <td><%= link_to 'Destroy', url_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Url item', new_url_item_path %>

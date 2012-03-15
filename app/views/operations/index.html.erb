@@ -1,0 +1,9 @@
+<div id="operations"></div>
+
+<script type="text/javascript">
+  $(function() {
+    // Icm is the app name
+    window.router = new Icm.Routers.OperationsRouter({operations: <%= @operations.to_json.html_safe -%>});
+    Backbone.history.start();
+  });
+</script>

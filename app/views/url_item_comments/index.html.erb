@@ -1,0 +1,25 @@
+<h1>Listing url_item_comments</h1>
+
+<table>
+  <tr>
+    <th>Comment</th>
+    <th>Url item</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @url_item_comments.each do |url_item_comment| %>
+  <tr>
+    <td><%= url_item_comment.comment %></td>
+    <td><%= url_item_comment.url_item_id %></td>
+    <td><%= link_to 'Show', url_item_comment %></td>
+    <td><%= link_to 'Edit', edit_url_item_comment_path(url_item_comment) %></td>
+    <td><%= link_to 'Destroy', url_item_comment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Url item comment', new_url_item_comment_path %>
